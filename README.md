@@ -6,6 +6,12 @@
 
 [Try viewporter out here](http://bbc-sport.github.io/viewporter).
 
+## Credits
+
+* [Will Bamford](https://twitter.com/WebSeed)
+* [Alexander Jones](https://twitter.com/Itsaljones)
+* [David Wilson](https://twitter.com/nameswilson)
+
 ## License
 
 > The MIT License (MIT)
