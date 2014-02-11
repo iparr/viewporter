@@ -1,6 +1,6 @@
 # Viewporter
 
-> Viewporter is a simple in-browser tool created by developers at BBC Sport for checking how a responsive web site responds to different screen sizes.
+> A simple in-browser tool created by developers at BBC Sport for checking how a responsive website responds to different screen sizes.
 
 ## Demo
 
