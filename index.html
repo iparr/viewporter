@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Viewporter</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/viewporter.css">
+    <script>
+    /*
+      (function () {
+        var params = {}, qs = location.search.substring(1), re = /([^&=]+)=([^&]*)/g, m;
+        while (m = re.exec(qs))
+          params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+        window.viewporter = {params: params};
+      } ());
+    */
+    </script>
+    
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/mousetrap.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/viewporter.js"></script>
+  </head>
+  <body>
+    <h1 class="visually-hidden">Viewporter</h1>
+    <noscript>Oops, your browser doesn't support JavaScript or it is disabled.</noscript>
+    <script>
+      /* var url = viewporter.params.url || 'default.html'; */
+      document.write('<div id="viewport-container"><iframe id="viewport" src="http://www.bbc.co.uk/sport/winter-olympics/2014"></iframe></div>');
+    </script>
+    
+    <section id="main-menu" class="menu main-menu mode-url">
+      <a id="presets-btn" class="toggle-btn presets-btn h-bdr" href="#"><span class="icon"></span> <span class="label">Presets</span></a>
+      <a id="share-btn" class="toggle-btn share-btn h-bdr" href="#"><span class="icon"></span> <span class="label">Share</span></a>
+      <div class="mode-menu">
+        
+        <section id="size-menu" class="menu size-menu h-bdr">
+          <form class="size-form" method="get" action="index.html">
+            <label for="size-width-input" class="size-lbl size-width-lbl">W</label>
+            <input id="size-width-input" class="menu-item text-input size-width-input" type="text" placeholder="Auto" />
+            <label for="size-height-input" class="size-lbl size-height-lbl">H</label>
+            <input id="size-height-input" class="menu-item text-input size-height-input" type="text" placeholder="Auto" />
+            <input type="submit" name="resize" value="Resize" id="resize-btn" class="menu-item menu-btn resize-btn" />
+          </form>
+        </section>
+        
+        <section id="url-menu" class="menu url-menu h-bdr">
+          <form class="url-form" method="get" action="index.html">
+            <label class="visually-hidden" for="url">URL</label>
+      	    <input id="url-input" class="menu-item text-input url-input" type="url" name="url" placeholder="Enter a URL" />
+            <input type="submit" value="Set" id="url-btn" class="menu-item menu-btn url-btn" />
+          </form>
+        </section>
+        
+      </div>
+      <a id="help-btn" class="toggle-btn help-btn h-bdr" href="#"><span class="label">Help</span></a>
+      <a id="mode-btn" class="toggle-btn mode-btn h-bdr mode-size" href="#"><span class="icon"></span> <span class="label">URL</span></a>
+    </section>
+    
+    <!-- Presets panel -->
+    <section id="presets-panel" class="panel presets-panel edit-disabled" style="display: none">
+      <table id="presets-table" class="table presets-table">
+        <colgroup>
+          <col class="col-name" />
+          <col class="col-size" />
+          <col class="col-kb" />
+          <col class="col-delete" />
+          <col class="col-move" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="col-name" scope="col">Name</th>
+            <th class="col-size" scope="col">
+              <span class="icon icon-size" title="Size">Size</span>
+            </th>
+            <th class="col-kb" scope="col">
+              <span class="icon icon-kb" title="Keyboard shortcut">Keyboard shortcut</span>
+            </th>
+            <th class="col-delete" scope="col">Delete</th>
+            <th class="col-move" scope="col">Move</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <footer class="menu presets-footer-menu">
+        <div class="save-container h-bdr-l">
+          <a id="save-current-as-preset-btn" href="#" class="menu-item menu-btn save-btn"><span class="icon icon-save-white"></span>Save current</a>
+        </div>
+        <a id="presets-edit-btn" class="toggle-btn edit-btn h-bdr-r" href="#"><span class="icon"></span> <span class="label">Edit</span></a>
+      </footer>
+    </section>
+    
+    <section id="flash-info" class="flash-info"></section>
+  </body>
+</html>

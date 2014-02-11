@@ -1,0 +1,781 @@
+/* line 3, ../sass/viewporter.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Colours */
+/* Sizing & positioning */
+/* line 55, ../sass/viewporter.scss */
+.h-bdr,
+.h-bdr-l {
+  border-left: 0.1rem solid rgba(255, 255, 255, 0.1);
+}
+
+/* line 60, ../sass/viewporter.scss */
+.h-bdr,
+.h-bdr-r {
+  border-right: 0.1rem solid rgba(0, 0, 0, 0.3);
+}
+
+/* Base styling */
+/* line 86, ../sass/viewporter.scss */
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  /* -webkit-font-smoothing: antialiased; */
+}
+
+/* line 93, ../sass/viewporter.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  background: white;
+  /* rgba(0, 0, 0, 0.15); */
+  font-size: 1.4rem;
+  min-width: 35rem;
+  font-weight: bold;
+}
+
+/* line 105, ../sass/viewporter.scss */
+button,
+input {
+  border: 0 none;
+  margin: 0;
+  background-color: transparent;
+}
+
+/* line 111, ../sass/viewporter.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 115, ../sass/viewporter.scss */
+a:focus {
+  outline: none;
+}
+
+/* line 119, ../sass/viewporter.scss */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Icons */
+/* line 134, ../sass/viewporter.scss */
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-indent: -7999em;
+  background-image: url(images/icons-240x120.png);
+  background-size: 24rem 12rem;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  /* line 147, ../sass/viewporter.scss */
+  .icon {
+    background-image: url(images/icons-240x120@2x.png);
+  }
+}
+/* line 200, ../sass/viewporter.scss */
+.icon-kb {
+  background-position: 0 0rem;
+}
+
+/* line 204, ../sass/viewporter.scss */
+.icon-size {
+  background-position: -12rem 0rem;
+}
+
+/* line 208, ../sass/viewporter.scss */
+.icon-save-white {
+  background-position: -4rem -4rem;
+}
+
+/* Viewport */
+/* line 214, ../sass/viewporter.scss */
+#viewport-container {
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  background: #ccc;
+  -webkit-transition: top 0.5s ease-out;
+  -moz-transition: top 0.5s ease-out;
+  -o-transition: top 0.5s ease-out;
+  transition: top 0.5s ease-out;
+  top: 4.8rem;
+}
+/* line 224, ../sass/viewporter.scss */
+#viewport-container.fullscreen {
+  top: 0;
+}
+
+/* line 229, ../sass/viewporter.scss */
+#viewport {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  margin: 0 auto;
+  width: 100%;
+  height: 99%;
+  border: none;
+  background: #fff;
+  /* Some sites do not set a background colour! */
+}
+
+/* line 238, ../sass/viewporter.scss */
+.toggle-btn {
+  display: block;
+  position: absolute;
+  top: 0;
+  font-size: 1.2rem;
+  height: 4.8rem;
+  color: #fff;
+  padding: 0 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+/* line 248, ../sass/viewporter.scss */
+.toggle-btn.presets-btn.active {
+  background: #323232;
+}
+/* line 251, ../sass/viewporter.scss */
+.toggle-btn:hover {
+  background: #4C4C4C;
+}
+
+/* line 258, ../sass/viewporter.scss */
+.toggle-btn .icon,
+.menu-btn .icon {
+  margin-right: 0.2rem;
+}
+
+/* line 263, ../sass/viewporter.scss */
+.menu-item {
+  display: block;
+  position: absolute;
+  font-size: 1.2rem;
+  line-height: 2.8rem;
+  height: 2.8rem;
+  top: 1rem;
+}
+
+/* line 272, ../sass/viewporter.scss */
+.menu-btn {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 -0.1rem rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 1rem;
+  -webkit-box-shadow: black 0 0.1rem 0;
+  -moz-box-shadow: black 0 0.1rem 0;
+  box-shadow: black 0 0.1rem 0;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #30a983), color-stop(100%, #028d5d));
+  background-image: -webkit-linear-gradient(#30a983, #028d5d);
+  background-image: -moz-linear-gradient(#30a983, #028d5d);
+  background-image: -o-linear-gradient(#30a983, #028d5d);
+  background-image: linear-gradient(#30a983, #028d5d);
+}
+/* line 286, ../sass/viewporter.scss */
+.menu-btn:hover, .menu-btn:focus {
+  -webkit-box-shadow: black 0 0.1rem 0, inset #028d5d 0 0 1rem;
+  -moz-box-shadow: black 0 0.1rem 0, inset #028d5d 0 0 1rem;
+  box-shadow: black 0 0.1rem 0, inset #028d5d 0 0 1rem;
+}
+
+/* line 291, ../sass/viewporter.scss */
+.cell-btn {
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+
+/* line 296, ../sass/viewporter.scss */
+.text-input {
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: #fff;
+  color: #323232;
+  padding: 0 0.5rem;
+  width: 6rem;
+  border-radius: 0.2rem;
+}
+/* line 38, ../sass/viewporter.scss */
+.text-input.placeholder {
+  color: #999999;
+}
+/* line 41, ../sass/viewporter.scss */
+.text-input:-moz-placeholder {
+  color: #999999;
+}
+/* line 44, ../sass/viewporter.scss */
+.text-input::-webkit-input-placeholder {
+  color: #999999;
+}
+/* line 305, ../sass/viewporter.scss */
+.text-input:focus {
+  -webkit-box-shadow: inset #515151 0 0 0.1rem;
+  -moz-box-shadow: inset #515151 0 0 0.1rem;
+  box-shadow: inset #515151 0 0 0.1rem;
+}
+
+/* line 310, ../sass/viewporter.scss */
+.menu {
+  position: relative;
+  background: #444444;
+  height: 4.8rem;
+  line-height: 4.8rem;
+}
+
+/* line 317, ../sass/viewporter.scss */
+.main-menu {
+  width: 100%;
+  -webkit-transition: top 0.5s ease-out;
+  -moz-transition: top 0.5s ease-out;
+  -o-transition: top 0.5s ease-out;
+  transition: top 0.5s ease-out;
+  top: 0;
+}
+/* line 322, ../sass/viewporter.scss */
+.main-menu.hidden {
+  top: -4.8rem;
+}
+/* line 326, ../sass/viewporter.scss */
+.main-menu .presets-btn {
+  width: 11rem;
+  left: 0;
+}
+/* line 329, ../sass/viewporter.scss */
+.main-menu .presets-btn .icon {
+  background-position: -8rem 0rem;
+}
+/* line 332, ../sass/viewporter.scss */
+.main-menu .presets-btn.active .icon {
+  background-position: -8rem -4rem;
+}
+/* line 336, ../sass/viewporter.scss */
+.main-menu .share-btn {
+  width: 10rem;
+  left: 11rem;
+}
+/* line 339, ../sass/viewporter.scss */
+.main-menu .share-btn .icon {
+  background-position: -2rem 0rem;
+}
+/* line 343, ../sass/viewporter.scss */
+.main-menu .help-btn {
+  color: #928F8F;
+  right: 11rem;
+  text-align: center;
+  width: 10rem;
+}
+/* line 349, ../sass/viewporter.scss */
+.main-menu .mode-btn {
+  width: 11rem;
+  right: 0;
+}
+/* line 353, ../sass/viewporter.scss */
+.main-menu .mode-btn.mode-size .icon {
+  background-position: -6rem 0rem;
+  /* Note: indicates switch *to* URL */
+}
+/* line 357, ../sass/viewporter.scss */
+.main-menu .mode-btn .icon {
+  margin-left: 1.2rem;
+}
+/* line 361, ../sass/viewporter.scss */
+.main-menu .mode-btn.mode-url .icon {
+  background-position: -12rem 0rem;
+}
+/* line 366, ../sass/viewporter.scss */
+.main-menu .mode-menu {
+  position: absolute;
+  left: 21rem;
+  right: 21rem;
+  height: 4.8rem;
+}
+/* line 372, ../sass/viewporter.scss */
+.main-menu .mode-menu .size-menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 379, ../sass/viewporter.scss */
+.main-menu .mode-menu .size-menu .size-form {
+  position: relative;
+  width: 34rem;
+  height: 4.8rem;
+  margin: 0 auto;
+}
+/* line 385, ../sass/viewporter.scss */
+.main-menu .mode-menu .size-menu .size-form .size-lbl {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 2rem;
+  font-size: 1.1rem;
+  text-align: center;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  background: #928f8f;
+  color: #fff;
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+/* line 399, ../sass/viewporter.scss */
+.main-menu .mode-menu .size-menu .size-form .size-width-input,
+.main-menu .mode-menu .size-menu .size-form .size-height-input {
+  width: 10rem;
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+/* line 403, ../sass/viewporter.scss */
+.main-menu .mode-menu .size-menu .size-form .size-width-lbl {
+  left: 0;
+}
+/* line 406, ../sass/viewporter.scss */
+.main-menu .mode-menu .size-menu .size-form .size-width-input {
+  left: 2rem;
+}
+/* line 409, ../sass/viewporter.scss */
+.main-menu .mode-menu .size-menu .size-form .size-height-lbl {
+  left: 13rem;
+}
+/* line 412, ../sass/viewporter.scss */
+.main-menu .mode-menu .size-menu .size-form .size-height-input {
+  left: 15rem;
+}
+/* line 415, ../sass/viewporter.scss */
+.main-menu .mode-menu .size-menu .size-form .resize-btn {
+  left: 26rem;
+  width: 8rem;
+}
+/* line 422, ../sass/viewporter.scss */
+.main-menu .mode-menu .url-menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-left: 0.2rem solid rgba(0, 0, 0, 0.3);
+  border-right: 0.2rem solid rgba(0, 0, 0, 0.3);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #202020), color-stop(15%, #323232));
+  background-image: -webkit-linear-gradient(#202020 0%, #323232 15%);
+  background-image: -moz-linear-gradient(#202020 0%, #323232 15%);
+  background-image: -o-linear-gradient(#202020 0%, #323232 15%);
+  background-image: linear-gradient(#202020 0%, #323232 15%);
+  -webkit-transition: top 0.3s ease-out;
+  -moz-transition: top 0.3s ease-out;
+  -o-transition: top 0.3s ease-out;
+  transition: top 0.3s ease-out;
+  top: -4.8rem;
+}
+/* line 431, ../sass/viewporter.scss */
+.main-menu .mode-menu .url-menu.active {
+  top: 0;
+}
+/* line 435, ../sass/viewporter.scss */
+.main-menu .mode-menu .url-menu .url-form {
+  position: relative;
+  width: 34rem;
+  height: 4.8rem;
+  margin: 0 auto;
+}
+/* line 440, ../sass/viewporter.scss */
+.main-menu .mode-menu .url-menu .url-form .url-input {
+  width: 25rem;
+  left: 0;
+}
+/* line 444, ../sass/viewporter.scss */
+.main-menu .mode-menu .url-menu .url-form .url-btn {
+  width: 8rem;
+  right: 0;
+}
+
+/* line 454, ../sass/viewporter.scss */
+.panel {
+  position: fixed;
+  -webkit-box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 459, ../sass/viewporter.scss */
+.flash-info {
+  position: fixed;
+  display: none;
+  left: 2rem;
+  bottom: 3rem;
+  color: #fff;
+  background: #028d5d;
+  padding: 1rem 1.5rem;
+  border: 0.3rem solid #30a983;
+}
+
+/* line 470, ../sass/viewporter.scss */
+.presets-footer-menu {
+  width: 100%;
+  height: 4.8rem;
+  border-bottom: 0.1rem solid #323232;
+}
+
+/* line 476, ../sass/viewporter.scss */
+.presets-panel {
+  top: 5.8rem;
+  left: 1rem;
+  width: 40rem;
+  background: #444444;
+  /* Arrow: http://cssarrowplease.com */
+}
+/* line 482, ../sass/viewporter.scss */
+.presets-panel:after {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  left: 5rem;
+  margin-left: -1rem;
+  border-color: rgba(68, 68, 68, 0);
+  border-bottom-color: #444444;
+  border-width: 1rem;
+}
+/* line 497, ../sass/viewporter.scss */
+.presets-panel.edit-enabled .col-name .label {
+  display: none;
+}
+/* line 501, ../sass/viewporter.scss */
+.presets-panel.edit-enabled .col-kb {
+  display: none;
+}
+/* line 507, ../sass/viewporter.scss */
+.presets-panel.edit-disabled .col-name input {
+  display: none;
+}
+/* line 512, ../sass/viewporter.scss */
+.presets-panel.edit-disabled .col-move,
+.presets-panel.edit-disabled .col-delete {
+  display: none;
+}
+/* line 516, ../sass/viewporter.scss */
+.presets-panel.edit-disabled .preset-row.selected td {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #028d5d), color-stop(5%, #30a983));
+  background-image: -webkit-linear-gradient(#028d5d 0%, #30a983 5%);
+  background-image: -moz-linear-gradient(#028d5d 0%, #30a983 5%);
+  background-image: -o-linear-gradient(#028d5d 0%, #30a983 5%);
+  background-image: linear-gradient(#028d5d 0%, #30a983 5%);
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+/* line 521, ../sass/viewporter.scss */
+.presets-panel.edit-disabled .preset-row.selected td, .presets-panel.edit-disabled .preset-row.selected td .name {
+  color: white;
+}
+/* line 526, ../sass/viewporter.scss */
+.presets-panel .presets-table {
+  counter-reset: row;
+}
+/* line 528, ../sass/viewporter.scss */
+.presets-panel .presets-table .col-name {
+  text-align: left;
+}
+/* line 531, ../sass/viewporter.scss */
+.presets-panel .presets-table .preset-row {
+  counter-increment: row;
+}
+/* line 533, ../sass/viewporter.scss */
+.presets-panel .presets-table .preset-row:first-child .move-up-btn {
+  visibility: hidden;
+}
+/* line 536, ../sass/viewporter.scss */
+.presets-panel .presets-table .preset-row:last-child .move-down-btn {
+  visibility: hidden;
+}
+/* line 540, ../sass/viewporter.scss */
+.presets-panel .presets-table td {
+  white-space: nowrap;
+}
+/* line 542, ../sass/viewporter.scss */
+.presets-panel .presets-table td.col-name {
+  width: 18rem;
+  max-width: 18rem;
+}
+/* line 546, ../sass/viewporter.scss */
+.presets-panel .presets-table td .name {
+  position: relative;
+  color: #323232;
+  font-weight: bold;
+  height: 4.8rem;
+  line-height: 4.8rem;
+}
+/* line 552, ../sass/viewporter.scss */
+.presets-panel .presets-table td .name .label {
+  overflow: hidden;
+}
+/* line 555, ../sass/viewporter.scss */
+.presets-panel .presets-table td .name input {
+  width: 100%;
+  border: 0.1rem solid #cccccc;
+}
+/* line 560, ../sass/viewporter.scss */
+.presets-panel .presets-table td.col-kb:after {
+  content: counter(row);
+}
+/* line 564, ../sass/viewporter.scss */
+.presets-panel .presets-table td .move-up-btn .icon {
+  background-position: -22rem -2rem;
+}
+/* line 567, ../sass/viewporter.scss */
+.presets-panel .presets-table td .move-up-btn:hover .icon {
+  background-position: -22rem -6rem;
+}
+/* line 572, ../sass/viewporter.scss */
+.presets-panel .presets-table td .move-down-btn .icon {
+  background-position: -20rem -2rem;
+}
+/* line 575, ../sass/viewporter.scss */
+.presets-panel .presets-table td .move-down-btn:hover .icon {
+  background-position: -20rem -6rem;
+}
+/* line 580, ../sass/viewporter.scss */
+.presets-panel .presets-table td .delete-btn .icon {
+  background-position: -18rem -2rem;
+}
+/* line 583, ../sass/viewporter.scss */
+.presets-panel .presets-table td .delete-btn:hover .icon {
+  background-position: -18rem -6rem;
+}
+/* line 588, ../sass/viewporter.scss */
+.presets-panel .presets-table .col-size {
+  width: 13rem;
+}
+/* line 592, ../sass/viewporter.scss */
+.presets-panel .presets-table .col-kb,
+.presets-panel .presets-table .col-delete {
+  width: 7rem;
+}
+/* line 596, ../sass/viewporter.scss */
+.presets-panel .presets-footer-menu {
+  position: relative;
+}
+/* line 598, ../sass/viewporter.scss */
+.presets-panel .presets-footer-menu .save-container {
+  position: absolute;
+  left: 9rem;
+  top: 0;
+  width: 31rem;
+  height: 4.8rem;
+}
+/* line 604, ../sass/viewporter.scss */
+.presets-panel .presets-footer-menu .save-container .save-btn {
+  text-align: left;
+  width: 14rem;
+  right: 1rem;
+}
+/* line 610, ../sass/viewporter.scss */
+.presets-panel .presets-footer-menu .edit-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9rem;
+}
+/* line 615, ../sass/viewporter.scss */
+.presets-panel .presets-footer-menu .edit-btn .icon {
+  background-position: -10rem 0rem;
+}
+/* line 616, ../sass/viewporter.scss */
+.presets-panel .presets-footer-menu .edit-btn.active .icon {
+  background-position: -16rem 0rem;
+}
+
+/* line 621, ../sass/viewporter.scss */
+.table {
+  color: #747474;
+  width: 100%;
+  border-collapse: separate;
+}
+/* line 626, ../sass/viewporter.scss */
+.table tr:hover td,
+.table tr:focus td {
+  background: #dfdbdb;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15);
+}
+/* line 630, ../sass/viewporter.scss */
+.table th, .table td {
+  text-align: center;
+  height: 4.8rem;
+  /*4rem;*/
+  line-height: 2.5rem;
+  padding: 0 1rem;
+  background: #444444;
+}
+/* line 637, ../sass/viewporter.scss */
+.table td {
+  font-size: 1.4rem;
+  background: #efeded;
+  cursor: pointer;
+  border-top: 0.1rem solid white;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15);
+}
+/* line 643, ../sass/viewporter.scss */
+.table th {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 0.1rem solid #323232;
+}
+
+/* Media Queries */
+@media screen and (min-width: 0em) and (max-width: 50em) {
+  /* line 655, ../sass/viewporter.scss */
+  .presets-panel:after {
+    left: 2rem;
+  }
+
+  /* line 659, ../sass/viewporter.scss */
+  .main-menu .mode-menu {
+    right: 12rem;
+    left: 12rem;
+  }
+  /* line 663, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form {
+    width: 27rem;
+  }
+  /* line 666, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form .size-width-input,
+  .main-menu .mode-menu .size-menu .size-form .size-height-input {
+    width: 7rem;
+  }
+  /* line 674, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form .size-height-lbl {
+    left: 10rem;
+  }
+  /* line 677, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form .size-height-input {
+    left: 12rem;
+  }
+  /* line 680, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form .resize-btn {
+    width: 7rem;
+    left: 20rem;
+  }
+  /* line 688, ../sass/viewporter.scss */
+  .main-menu .mode-menu .url-menu .url-form {
+    width: 27rem;
+  }
+  /* line 690, ../sass/viewporter.scss */
+  .main-menu .mode-menu .url-menu .url-form .url-input {
+    width: 19rem;
+  }
+  /* line 693, ../sass/viewporter.scss */
+  .main-menu .mode-menu .url-menu .url-form .url-btn {
+    width: 7rem;
+    left: 20rem;
+  }
+  /* line 701, ../sass/viewporter.scss */
+  .main-menu .mode-btn, .main-menu .presets-btn, .main-menu .share-btn, .main-menu .help-btn {
+    width: 6rem;
+  }
+  /* line 704, ../sass/viewporter.scss */
+  .main-menu .mode-btn .label, .main-menu .presets-btn .label, .main-menu .share-btn .label, .main-menu .help-btn .label {
+    display: none;
+  }
+  /* line 707, ../sass/viewporter.scss */
+  .main-menu .help-btn:before {
+    content: '?';
+  }
+  /* line 710, ../sass/viewporter.scss */
+  .main-menu .share-btn {
+    left: 6rem;
+  }
+  /* line 712, ../sass/viewporter.scss */
+  .main-menu .share-btn .icon {
+    background-position: -2rem -2rem;
+  }
+  /* line 716, ../sass/viewporter.scss */
+  .main-menu .help-btn {
+    right: 6rem;
+  }
+  /* line 719, ../sass/viewporter.scss */
+  .main-menu .mode-btn .icon, .main-menu .presets-btn .icon, .main-menu .share-btn .icon {
+    margin-left: 0.8rem;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 730, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form {
+    width: 68rem;
+  }
+  /* line 732, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form .size-lbl {
+    left: 1rem;
+    top: 1rem;
+    width: 3rem;
+  }
+  /* line 738, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form .size-width-input,
+  .main-menu .mode-menu .size-menu .size-form .size-height-input {
+    width: 16rem;
+  }
+  /* line 741, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form .size-width-lbl {
+    left: 10.5rem;
+  }
+  /* line 744, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form .size-width-input {
+    left: 13.5rem;
+  }
+  /* line 747, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form .size-height-lbl {
+    left: 30.5rem;
+  }
+  /* line 750, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form .size-height-input {
+    left: 33.5rem;
+  }
+  /* line 753, ../sass/viewporter.scss */
+  .main-menu .mode-menu .size-menu .size-form .resize-btn {
+    left: 50.5rem;
+    width: 8rem;
+  }
+  /* line 761, ../sass/viewporter.scss */
+  .main-menu .mode-menu .url-menu .url-form {
+    width: 68rem;
+  }
+  /* line 763, ../sass/viewporter.scss */
+  .main-menu .mode-menu .url-menu .url-form .url-input {
+    width: 50rem;
+    left: 4.5rem;
+  }
+  /* line 767, ../sass/viewporter.scss */
+  .main-menu .mode-menu .url-menu .url-form .url-btn {
+    width: 8rem;
+    left: 55.5rem;
+  }
+}
