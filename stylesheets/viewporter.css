@@ -539,7 +539,7 @@ a:focus {
 /* line 555, ../sass/viewporter.scss */
 .presets-panel .presets-table td .name input {
   width: 100%;
-  border: 0.1rem solid #cccccc;
+  border: 0.1rem solid #ccc;
 }
 /* line 560, ../sass/viewporter.scss */
 .presets-panel .presets-table td.col-kb:after {

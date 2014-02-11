@@ -45,7 +45,8 @@ img {
 	max-width:100%;
 }
 
-a, a:visited {
+a,
+a:visited {
 	color:$lab-green;
 	border-bottom:1px solid $light-grey;
 }
@@ -56,7 +57,6 @@ a {
 a:focus { 
   outline: none;
 }
-
 
 .visually-hidden {
 	border: 0;
@@ -85,40 +85,41 @@ a:focus {
 
 /* Typographic Scale */
 
-h1,.trafalgar{
+h1, .trafalgar {
     font-size:4.8rem;
     color:$lab-green;
     line-height:1.5;
     margin:0;
     letter-spacing: -0.048rem;
 }
-h2,.double-pica{
-    font-size:2.4rem;
-    color:$lab-green;
-    margin:0 0 1.6rem;
+h2, .double-pica {
+    font-size: 2.4rem;
+    color: $lab-green;
+    margin: 0 0 1.6rem;
 }
-h3,.great-primer{
-    font-size:2.0rem;
-    margin:0 0 0.4rem;
+h3, .great-primer {
+    font-size: 2.0rem;
+    margin: 0 0 0.4rem;
 }
-h4,.pica{
-	font-size:1.6rem;
+h4, .pica {
+	font-size: 1.6rem;
 	color:$dark-grey;
 }
-h5,.long-primer{
-	font-size:1.3rem;
+h5, .long-primer {
+	font-size: 1.3rem;
 }
-h6,.brevier {
-	font-size:1.0rem;
+h6, .brevier {
+	font-size: 1.0rem;
 }
 
 h1, .trafalgar, h2, .double-pica, h3, .great-primer {
-	font-weight:bold;
+	font-weight: bold;
 }
 
 p {
-	margin:0 0 1.6rem;
+	margin: 0 0 1.6rem;
 }
+
 .img-caption {
 	font-style: italic;
 	text-align: center;
@@ -126,50 +127,57 @@ p {
 	max-width: 40rem;
 }
 
-.container
-{
-	margin:0 auto;
+.container {
+	margin: 0 auto;
 	max-width:53.000em;
 	padding:0 0.8rem;
 }
+
 .region {
     position: relative;
     vertical-align: top;
     width: 100%;
     float:left;
 }
+
 section {
 	padding: 3.2rem 0;
 }
+
 header {
 	padding: 3.2rem 0.8rem;
 }
 
 .size-section, .saving-section {
-	background:$light-grey;	
+	background: $light-grey;	
 }
+
 .size-description, .presets-description, .saving-description {
-	width:90%;
-	float:none;
-	margin:0 auto;
-	max-width:38rem;
+	width: 90%;
+	float: none;
+	margin: 0 auto;
+	max-width: 38rem;
 }
+
 .size-figure, .presets-figure, .saving-figure {
 	margin:0 auto;
 	text-align:center;
 }
+
 figure {
 	padding: 0.4rem 0 0;
 }
+
 .header {
 	text-align:center;
 }
+
 .header p {
 	max-width: 38rem;
 	margin:0 auto;
 }
 
-@media screen and (min-width: 28.5em){
+@media screen and (min-width: 28.5em) {
 	section {
 		padding: 3.2rem 1.6rem;
 	}
@@ -177,54 +185,64 @@ figure {
 		padding: 4.8rem 1.6rem 6.8rem;
 	}
 	.container {
-		width:83.333%;
+		width: 83.333%;
 	}
 }
 
-@media screen and (min-width: 37.5em){
-	h1,.trafalgar{
-    	font-size:6.4rem;
+@media screen and (min-width: 37.5em) {
+	h1, .trafalgar{
+    	font-size: 6.4rem;
 	}
 }
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 850px) {
+
 	section {
 		padding: 6.8rem 1.6rem;
 	}
+
 	.region {
 		float:left;
 	}
+
 	.size-description, .presets-description, .saving-description {
-		width:40%;
-		max-width:100%;
+		width: 40%;
+		max-width: 100%;
 	}
+
 	.size-description, .saving-description {
-		width:40%;
-		padding-left:0.8rem;
-		left:60%;
+		width: 40%;
+		padding-left: 0.8rem;
+		left: 60%;
 	}
+
 	.presets-description {
-		padding-right:0.8rem;
+		padding-right: 0.8rem;
 	}
+
 	.presets-figure {
-		padding-left:0.8rem;
+		padding-left: 0.8rem;
 	}
+
 	.presets-figure, .size-figure, .saving-figure {
-		width:60%;
+		width: 60%;
 	}
+
 	.size-figure, .saving-figure {
-		padding-right:0.8rem;
-		left:-40%;
+		padding-right: 0.8rem;
+		left: -40%;
 	}
+
 	figure {
 		padding: 1.6rem 0 0;
 	}
 	.header p {
-		max-width:100%;
+		max-width: 100%;
 	}
-
 }
 
-
-	
-
+.key {
+	color: #ccc;
+	padding: 24px;
+	text-align: center;
+}

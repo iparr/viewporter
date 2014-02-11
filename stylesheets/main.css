@@ -40,18 +40,19 @@ img {
   max-width: 100%;
 }
 
-/* line 48, ../sass/main.scss */
-a, a:visited {
+/* line 49, ../sass/main.scss */
+a,
+a:visited {
   color: #1e9c6c;
   border-bottom: 1px solid #f0eeee;
 }
 
-/* line 52, ../sass/main.scss */
+/* line 53, ../sass/main.scss */
 a {
   text-decoration: none;
 }
 
-/* line 56, ../sass/main.scss */
+/* line 57, ../sass/main.scss */
 a:focus {
   outline: none;
 }
@@ -135,7 +136,7 @@ p {
   margin: 0 0 1.6rem;
 }
 
-/* line 122, ../sass/main.scss */
+/* line 123, ../sass/main.scss */
 .img-caption {
   font-style: italic;
   text-align: center;
@@ -150,7 +151,7 @@ p {
   padding: 0 0.8rem;
 }
 
-/* line 135, ../sass/main.scss */
+/* line 136, ../sass/main.scss */
 .region {
   position: relative;
   vertical-align: top;
@@ -158,22 +159,22 @@ p {
   float: left;
 }
 
-/* line 141, ../sass/main.scss */
+/* line 143, ../sass/main.scss */
 section {
   padding: 3.2rem 0;
 }
 
-/* line 144, ../sass/main.scss */
+/* line 147, ../sass/main.scss */
 header {
   padding: 3.2rem 0.8rem;
 }
 
-/* line 148, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
 .size-section, .saving-section {
   background: #f0eeee;
 }
 
-/* line 151, ../sass/main.scss */
+/* line 155, ../sass/main.scss */
 .size-description, .presets-description, .saving-description {
   width: 90%;
   float: none;
@@ -181,102 +182,108 @@ header {
   max-width: 38rem;
 }
 
-/* line 157, ../sass/main.scss */
+/* line 162, ../sass/main.scss */
 .size-figure, .presets-figure, .saving-figure {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 161, ../sass/main.scss */
+/* line 167, ../sass/main.scss */
 figure {
   padding: 0.4rem 0 0;
 }
 
-/* line 164, ../sass/main.scss */
+/* line 171, ../sass/main.scss */
 .header {
   text-align: center;
 }
 
-/* line 167, ../sass/main.scss */
+/* line 175, ../sass/main.scss */
 .header p {
   max-width: 38rem;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 28.5em) {
-  /* line 173, ../sass/main.scss */
+  /* line 181, ../sass/main.scss */
   section {
     padding: 3.2rem 1.6rem;
   }
 
-  /* line 176, ../sass/main.scss */
+  /* line 184, ../sass/main.scss */
   header {
     padding: 4.8rem 1.6rem 6.8rem;
   }
 
-  /* line 179, ../sass/main.scss */
+  /* line 187, ../sass/main.scss */
   .container {
     width: 83.333%;
   }
 }
 @media screen and (min-width: 37.5em) {
-  /* line 185, ../sass/main.scss */
+  /* line 193, ../sass/main.scss */
   h1, .trafalgar {
     font-size: 6.4rem;
   }
 }
 @media screen and (min-width: 850px) {
-  /* line 191, ../sass/main.scss */
+  /* line 200, ../sass/main.scss */
   section {
     padding: 6.8rem 1.6rem;
   }
 
-  /* line 194, ../sass/main.scss */
+  /* line 204, ../sass/main.scss */
   .region {
     float: left;
   }
 
-  /* line 197, ../sass/main.scss */
+  /* line 208, ../sass/main.scss */
   .size-description, .presets-description, .saving-description {
     width: 40%;
     max-width: 100%;
   }
 
-  /* line 201, ../sass/main.scss */
+  /* line 213, ../sass/main.scss */
   .size-description, .saving-description {
     width: 40%;
     padding-left: 0.8rem;
     left: 60%;
   }
 
-  /* line 206, ../sass/main.scss */
+  /* line 219, ../sass/main.scss */
   .presets-description {
     padding-right: 0.8rem;
   }
 
-  /* line 209, ../sass/main.scss */
+  /* line 223, ../sass/main.scss */
   .presets-figure {
     padding-left: 0.8rem;
   }
 
-  /* line 212, ../sass/main.scss */
+  /* line 227, ../sass/main.scss */
   .presets-figure, .size-figure, .saving-figure {
     width: 60%;
   }
 
-  /* line 215, ../sass/main.scss */
+  /* line 231, ../sass/main.scss */
   .size-figure, .saving-figure {
     padding-right: 0.8rem;
     left: -40%;
   }
 
-  /* line 219, ../sass/main.scss */
+  /* line 236, ../sass/main.scss */
   figure {
     padding: 1.6rem 0 0;
   }
 
-  /* line 222, ../sass/main.scss */
+  /* line 239, ../sass/main.scss */
   .header p {
     max-width: 100%;
   }
+}
+/* line 244, ../sass/main.scss */
+.key {
+  color: #ccc;
+  padding: 24px;
+  text-align: center;
 }
