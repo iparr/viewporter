@@ -213,7 +213,7 @@ $icon-size: 2rem;
 
 #viewport-container {
   text-align: center;
-  width: 100%;
+  min-width: 100%;
   overflow: hidden;
   position: absolute;
   bottom: 0;
@@ -308,7 +308,7 @@ $icon-size: 2rem;
 }
 
 .menu {
-  position: relative;
+  position: fixed;
 	background: $grey;
 	height: $menu-height;
   line-height: $menu-height;
